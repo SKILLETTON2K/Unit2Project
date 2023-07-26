@@ -200,5 +200,9 @@ body{
 
 .wrapper .main_content .info div{
   margin-bottom: 20px;
+  opacity: 1.2;
 }
 
+.logo {
+  margin-left: 12px;
+}

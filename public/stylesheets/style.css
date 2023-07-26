@@ -110,16 +110,6 @@ hr {
   text-align: center;
 }
 
-#show-page ul {
-  margin: 0 0 2rem;
-  padding: 0;
-  list-style: none;
-}
-  
-#show-page li {
-  font-weight: bold;
-}
-
 .login {
   display: flex;
   justify-content: center;
@@ -128,7 +118,8 @@ hr {
 }
 
 .login img {
-  height: 30px;
+  height: 28px;
+  width: 25px;
 }
 
 .review-user {
@@ -143,7 +134,7 @@ hr {
 }
 
 body{
-   background-color: #f3f5f9;
+   background-color: #cfdaf0;
 }
 
 .wrapper{
@@ -152,16 +143,16 @@ body{
 }
 
 .wrapper .sidebar{
-  width: 200px;
+  width: 150px;
   height: 100%;
   background: #aec1fb;
-  padding: 30px 0px;
+  padding: 20px 0px;
   position: fixed;
+  margin-left: 5px;
 }
 
 .wrapper .sidebar h2{
   color: #fff;
-  text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -191,7 +182,7 @@ body{
 }
 .wrapper .main_content{
   width: 100%;
-  margin-left: 200px;
+  margin-left: 110%;
 }
 
 .wrapper .main_content .header{

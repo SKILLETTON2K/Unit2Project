@@ -6,9 +6,9 @@
   <div>Release Year: </div>
   <div><%= restaurant.location %></div>
   <div>Rating: </div>
-  <div><%= restaurant.mpaaRating %></div>
+  <div><%= restaurant.price %></div>
   <div>Now Showing: </div>
-  <div><%= restaurant.nowShowing ? 'Yes' : 'Nope' %></div>
+  <div><%= restaurant.img ? 'Yes' : 'Nope' %></div>
   <div>Cast:</div>
   <ul>
     <%- restaurant.cast.map(p => 

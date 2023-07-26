@@ -15,7 +15,7 @@ require('./config/passport');
 const indexRouter = require('./routes/index');
 const restaurantsRouter = require('./routes/restaurants');
 const reviewsRouter = require('./routes/reviews');
-const performersRouter = require('./routes/performers');
+const eventsRouter = require('./routes/events');
 
 var app = express();
 
@@ -47,7 +47,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
 app.use('/', reviewsRouter);
-app.use('/', performersRouter);
+app.use('/', eventsRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));

@@ -28,15 +28,15 @@ const restaurantSchema = new Schema({
   location: {
     type: String,
   },
-  mpaaRating: {
+  price: {
     type: String,
-    enum: ['G', 'PG', 'PG-13', 'R']
+    enum: ['$0', '$5-$15', '$20-$45', '$50+']
   },
   cast: [{
     type: Schema.Types.ObjectId,
     ref: 'Event'
   }],
-  nowShowing: { type: Boolean, default: true },
+  img: { type: Boolean, default: true },
   reviews: [reviewSchema]
 }, {
   timestamps: true

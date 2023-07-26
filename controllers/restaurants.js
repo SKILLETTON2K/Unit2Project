@@ -24,7 +24,7 @@ function newRestaurant(req, res) {
 }
 
 async function create(req, res) {
-  req.body.nowShowing = !!req.body.nowShowing;
+  req.body.img = !!req.body.img;
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }

@@ -25,7 +25,7 @@ const reviewSchema = new Schema({
 
 const restaurantSchema = new Schema({
   title: { type: String, required: true },
-  releaseYear: {
+  location: {
     type: String,
   },
   mpaaRating: {
@@ -34,7 +34,7 @@ const restaurantSchema = new Schema({
   },
   cast: [{
     type: Schema.Types.ObjectId,
-    ref: 'Performer'
+    ref: 'Event'
   }],
   nowShowing: { type: Boolean, default: true },
   reviews: [reviewSchema]

@@ -22,7 +22,7 @@ nav > img {
 
 #new-form *,
 #add-review-form *,
-#add-performer-form * {
+#add-event-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -75,7 +75,7 @@ table td {
 }
 
 #add-review-form,
-#add-performer-form {
+#add-event-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
@@ -83,7 +83,7 @@ table td {
 }
 
 #add-review-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-event-form input[type="submit"]  {
   width: 10rem;
   grid-column: 2 / 3;
 }

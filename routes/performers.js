@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const performersCtrl = require('../controllers/performers');
+const eventsCtrl = require('../controllers/events');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-router.get('/performers/new', ensureLoggedIn, performersCtrl.new);
-router.post('/performers', ensureLoggedIn, performersCtrl.create);
-router.post('/restaurants/:id/performers', ensureLoggedIn, performersCtrl.addToCast);
+router.get('/events/new', ensureLoggedIn, eventsCtrl.new);
+router.post('/events', ensureLoggedIn, eventsCtrl.create);
+router.post('/restaurants/:id/events', ensureLoggedIn, eventsCtrl.addToCast);
 
 module.exports = router;

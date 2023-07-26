@@ -1,5 +1,5 @@
 const Restaurant = require('../models/restaurant');
-const Performer = require('../models/performer');
+const Event = require('../models/event');
 
 module.exports = {
   index,
@@ -15,8 +15,8 @@ async function index(req, res) {
 
 async function show(req, res) {
   const restaurant = await Restaurant.findById(req.params.id).populate('cast');
-  const performers = await Performer.find({ _id: { $nin: restaurant.cast } }).sort('name');
-  res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, performers });
+  const events = await Event.find({ _id: { $nin: restaurant.cast } }).sort('name');
+  res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, events });
 }
 
 function newRestaurant(req, res) {

@@ -4,25 +4,21 @@
   <div>Title: </div>
   <div><%= restaurant.title %></div>
   <div>Release Year: </div>
-  <div><%= restaurant.releaseYear %></div>
+  <div><%= restaurant.location %></div>
   <div>Rating: </div>
   <div><%= restaurant.mpaaRating %></div>
   <div>Now Showing: </div>
   <div><%= restaurant.nowShowing ? 'Yes' : 'Nope' %></div>
-  <!-- start cast list -->
   <div>Cast:</div>
   <ul>
     <%- restaurant.cast.map(p => 
       `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
     ).join('') %>
   </ul>
-  <!-- end cast list -->
 </section>
-<!-- add to cast form below this comment -->
-<form id="add-per-to-cast" action="/restaurants/<%= restaurant._id %>/performers" method="POST">
-  <select name="performerId">
-    <!-- Emit an option for each performer -->
-    <%- performers.map(p => 
+<form id="add-per-to-cast" action="/restaurants/<%= restaurant._id %>/events" method="POST">
+  <select name="eventId">
+    <%- events.map(p => 
       `<option value="${p._id}">${p.name}</option>`
     ).join('') %>
   </select>

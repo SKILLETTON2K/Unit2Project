@@ -19,7 +19,7 @@
 <br><br><h2>Reviews</h2>
 <form id="add-review-form" method="POST"
   action="/restaurants/<%= restaurant._id %>/reviews">
-  <label>Review:</label>
+  <label>Comments:</label>
   <textarea name="content"></textarea>
   <label>Rating:</label>
   <select name="rating">
@@ -38,7 +38,7 @@
       <tr>
         <th>User</th>
         <th>Date</th>
-        <th>Review</th>
+        <th>Comments</th>
         <th>Rating</th>
         <th></th>
       </tr>
@@ -46,16 +46,16 @@
     <tbody>
       <% let total = 0 %>
       <% restaurant.reviews.forEach(function(e) { %>
-        <% total += r.rating %>
+        <% total += e.rating %>
         <tr>
-          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+          <td class="review-user"><img alt="avatar" src="<%= e.userAvatar %>" referrerpolicy="no-referrer" ><%= e.userName %></td>
           <td><%= e.createdAt.toLocaleDateString() %></td>
           <td><%= e.content %></td>
           <td><%= e.rating %></td>
           <td>
-            <% if (user?._id.equals(r.user)) { %>
-              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+            <% if (user?._id.equals(e.user)) { %>
+              <form action="/reviews/<%= e._id %>?_method=DELETE" method="POST">
+                <button type="submit">Remove</button>
               </form>
             <% } %>
           </td>

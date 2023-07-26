@@ -6,9 +6,6 @@
       <th>Restaurant</th>
       <th>Location</th>
       <th>Average Price (PP)</th>
-      <th>Average Rating</th>
-      <th>Image</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +15,6 @@
         <td><%= r.location %></td>
         <td><%= r.price %></td>
         <td></td>
-        <td><%= r.img %></td>
         <td><a href="/restaurants/<%= r._id %>">Add Review</a></td>
       </tr>
       <% }); %>
@@ -27,10 +23,7 @@
           <br>
           <th>Event</th>
           <th>Location</th>
-          <th>Average Price</th>
-          <th>Average Rating</th>
-          <th>Image</th>
-          <th></th>
+          <th>Average Price (PP)</th>
         </tr>
       </thead>
       <tbody>
@@ -40,11 +33,11 @@
             <td><%= r.location %></td>
             <td><%= r.price %></td>
             <td></td>
-            <td><%= r.img %></td>
             <td><a href="/restaurants/<%= r._id %>">Add Review</a></td>
           </tr>
           <% }); %>
     </tbody>
   </table>
+  
   
 <%- include('../partials/footer') %>

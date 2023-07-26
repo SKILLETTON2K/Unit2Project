@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Location</th>
+      <th>Average Price</th>
+      <th>Average Rating</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% restaurants.forEach(function(r) { %>
+      <tr>
+        <td><%= r.title %></td>
+        <td><%= r.releaseYear %></td>
+        <td></td>
+        <td></td>
+        <td><a href="/restaurants/<%= r._id %>">ADD REVIEW</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

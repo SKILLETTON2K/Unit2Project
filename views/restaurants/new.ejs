@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/restaurants" method="POST">
+  <label>Name:</label>
+  <input type="text" name="title">
+  <label>Location:</label>
+  <input type="text" name="releaseYear">
+  <label>Average Price:</label>
+  <select name="mpaaRating">
+    <option value="G">G</option>
+    <option value="PG">PG</option>
+    <option value="PG-13">PG-13</option>
+    <option value="R">R</option>
+  </select>
+  <label>Image:</label>
+  <input type="checkbox" name="nowShowing" checked>
+  <input type="submit" value="Add Event">
+</form>
+
+<%- include('../partials/footer') %>

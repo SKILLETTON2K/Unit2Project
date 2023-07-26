@@ -5,13 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
+
 require('./config/passport');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const restaurantsRouter = require('./routes/restaurants');
+const reviewsRouter = require('./routes/reviews');
+const performersRouter = require('./routes/performers');
 
 var app = express();
 
@@ -24,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.SECRET,
@@ -34,17 +39,22 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 
-// catch 404 and forward to error handler
+app.use('/', indexRouter);
+app.use('/restaurants', restaurantsRouter);
+app.use('/', reviewsRouter);
+app.use('/', performersRouter);
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

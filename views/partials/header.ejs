@@ -7,10 +7,20 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title><%= title %></title>
 </head>
-<nav>
-    Add Event
-    Add Restaurant
-</nav>
 <body>
+  <div class="wrapper">
+    <div class="sidebar">
+        <ul>
+    <li><a href="/restaurants"><img src="https://i.imgur.com/PK0oCKtt.jpg" title="source: imgur.com" /></a></li>
+    <% if (user) { %>
+     <li><a href="/performers/new"	<%- title === 'Add Performer' ? 'class="active"' : '' %>>
+      Add New Event</a></li>
+      <li><a href="/restaurants/new" <%- title === 'Add Restaurant' ? 'class="active"' : '' %>>Add New Restaurant</a></li>
+      <li><a href="/logout">LOG OUT</a></li>
+    <% } else { %>
+      <li><a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a></li>
+    <% } %>
+  </nav>
   <main>
+    <div class="main_content">
     <h1><%= title %></h1>

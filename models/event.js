@@ -32,11 +32,13 @@ const eventSchema = new Schema({
     type: String,
     enum: ['$0', '$5-$15', '$20-$45', '$50+']
   },
+  image: {
+    type: String,
+  },
   cast: [{
     type: Schema.Types.ObjectId,
     ref: 'Event'
   }],
-  img: { type: Boolean, default: true },
   reviews: [reviewSchema]
 }, {
   timestamps: true

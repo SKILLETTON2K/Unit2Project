@@ -1,30 +1,32 @@
-const Event = require('../models/event');
 const Restaurant = require('../models/restaurant');
+const Event = require('../models/event');
 
 module.exports = {
+  show,
   new: newEvent,
-  create,
-  addToCast
+  create
 };
 
-async function addToCast(req, res) {
-  const restaurant = await Restaurant.findById(req.params.id);
-  restaurant.cast.push(req.body.eventId);
-  await restaurant.save();
-  res.redirect(`/restaurants/${restaurant._id}`);
+async function show(req, res) {
+  const event = await Event.findById(req.params.id).populate('cast');
+  const events = await Event.find({ _id: { $nin: event.cast } }).sort('name');
+  res.render('events/show', { title: 'Event Details', event, events });
 }
 
-async function newEvent(req, res) {
-  const events = await Event.find({}).sort('name');
-  res.render('events/new', { title: 'Add Event', events });
+function newEvent(req, res) {
+  res.render('events/new', { title: 'Add Event', errorMsg: '' });
 }
 
 async function create(req, res) {
-  req.body.born += 'T00:00';
+  req.body.img = !!req.body.img;
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
   try {
-    await Event.create(req.body);
+    const event = await Event.create(req.body);
+    res.redirect(`/events/${event._id}`);
   } catch (err) {
     console.log(err);
+    res.render('events/new', { errorMsg: err.message });
   }
-  res.redirect('/events/new');
 }

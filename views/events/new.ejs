@@ -1,10 +1,19 @@
 <%- include('../partials/header') %>
 
-<form id="add-event-form" action="/events" method="POST">
+<form id="new-form" action="/events" method="POST">
   <label>Name:</label>
-  <input type="text" name="name">
-  <label>Born:</label>
-  <input type="date" name="born">
+  <input type="text" name="title">
+  <label>Location:</label>
+  <input type="text" name="location">
+  <label>Average Price Per Person:</label>
+  <select name="price">
+    <option value="$0">$0</option>
+    <option value="$5-$15">$5-$15</option>
+    <option value="$20-$45">$20-$45</option>
+    <option value="$50+">$50+</option>
+  </select>
+  <label>Image URL:</label>
+  <input type="text" name="image" />
   <input type="submit" value="Add Event">
 </form>
 

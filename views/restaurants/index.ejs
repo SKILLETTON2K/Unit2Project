@@ -1,5 +1,4 @@
 <%- include('../partials/header') %>
-
 <table id="list">
   <thead>
     <tr>
@@ -37,6 +36,30 @@
           <% }); %>
     </tbody>
   </table>
-  
+
+  <h3>Google Maps</h3>
+<div id="map"></div>
+<script>
+  function initMap() {
+    var options = {
+      zoom: 5,
+      center:{lat:47.7511,lng:-120.7401} 
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), options);
+    var marker = new google.maps.Marker({
+      position:{lat:47.6062,lng:-122.3321},
+      map:map,
+    });
+
+    var infoWindow = new google.maps.InfoWindow({
+      content:'<h3>Google Maps</h3>'
+    });
+
+  }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN3zu0xkby1T1SHyWfi8hd2Q4vbZNSzyE&callback=initMap">
+  </script>
   
 <%- include('../partials/footer') %>

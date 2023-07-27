@@ -9,8 +9,8 @@ module.exports = {
 
 
 async function show(req, res) {
-  const event = await Event.findById(req.params.id).populate('cast');
-  const events = await Event.find({ _id: { $nin: event.cast } }).sort('name');
+  const event = await Event.findById(req.params.id).populate('time');
+  const events = await Event.find({ _id: { $nin: event.time } }).sort('name');
   res.render('events/show', { title: 'Event Details', event, events });
 }
 

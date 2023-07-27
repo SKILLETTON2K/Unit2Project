@@ -10,7 +10,7 @@
   <div>Posted Image: </div>
   <div><img src="<%= event.image  %>" height="150px" width="150px" class="images" alt="None"></div>
   <ul>
-    <%- event.cast.map(p => 
+    <%- event.time.map(p => 
       `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
     ).join('') %>
   </ul>

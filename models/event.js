@@ -35,7 +35,7 @@ const eventSchema = new Schema({
   image: {
     type: String,
   },
-  cast: [{
+  time: [{
     type: Schema.Types.ObjectId,
     ref: 'Event'
   }],

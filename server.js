@@ -10,7 +10,6 @@ var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
-
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
@@ -46,6 +45,9 @@ app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
+
+//Google Maps
+
 
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);

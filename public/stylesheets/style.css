@@ -124,6 +124,7 @@ hr {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+  margin-right: 5px;
 }
 
 body{
@@ -174,5 +175,15 @@ body{
 }
 
 .logo {
-  margin-left: 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.images{
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+.locations {
+  font-size: 15px;
 }

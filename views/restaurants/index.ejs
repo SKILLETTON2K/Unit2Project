@@ -12,30 +12,12 @@
     <% restaurants.forEach(function(r) { %>
       <tr>
         <td><%= r.title %></td>
-        <td><%= r.location %></td>
+        <td class="locations"><%= r.location %></td>
         <td><%= r.price %></td>
         <td></td>
         <td><a href="/restaurants/<%= r._id %>">Add Review</a></td>
       </tr>
       <% }); %>
-      <thead>
-        <tr>
-          <br>
-          <th>Event</th>
-          <th>Location</th>
-          <th>Average Price (PP)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% restaurants.forEach(function(r) { %>
-          <tr>
-            <td><%= r.title %></td>
-            <td><%= r.location %></td>
-            <td><%= r.price %></td>
-            <td></td>
-            <td><a href="/restaurants/<%= r._id %>">Add Review</a></td>
-          </tr>
-          <% }); %>
     </tbody>
   </table>
   

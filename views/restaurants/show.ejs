@@ -7,8 +7,8 @@
   <div><%= restaurant.location %></div>
   <div>Average Price (PP): </div>
   <div><%= restaurant.price %></div>
-  <div>Image: </div>
-  <div><%= restaurant.img ? 'Yes' : 'Nope' %></div>
+  <div>Posted Image: </div>
+  <div><img src="<%= restaurant.image  %>" height="150px" width="150px" class="images" alt="None"></div>
   <ul>
     <%- restaurant.cast.map(p => 
       `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`

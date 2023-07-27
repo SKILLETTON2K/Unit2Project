@@ -49,6 +49,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
+app.use('/events', eventsRouter);
 app.use('/', reviewsRouter);
 app.use('/', eventsRouter);
 

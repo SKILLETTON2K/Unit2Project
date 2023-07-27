@@ -7,6 +7,7 @@ module.exports = {
   create
 };
 
+
 async function show(req, res) {
   const event = await Event.findById(req.params.id).populate('cast');
   const events = await Event.find({ _id: { $nin: event.cast } }).sort('name');

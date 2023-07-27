@@ -3,9 +3,9 @@
 <table id="list">
   <thead>
     <tr>
-      <th>Restaurant</th>
-      <th>Location</th>
-      <th>Average Price (PP)</th>
+      <th id="listTwo">Restaurant</th>
+      <th id="listTwo">Location</th>
+      <th id="listTwo">Average Price (PP)</th>
     </tr>
   </thead>
   <tbody>
@@ -15,9 +15,26 @@
         <td class="locations"><%= r.location %></td>
         <td><%= r.price %></td>
         <td></td>
-        <td><a href="/restaurants/<%= r._id %>">Add Review</a></td>
+        <td><a class="addReview" href="/restaurants/<%= r._id %>">Add Review</a></td>
       </tr>
       <% }); %>
+      <thead>
+        <tr>
+          <th id="listThree">Events</th>
+          <th id="listThree">Location</th>
+          <th id="listThree">Average Price (PP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% restaurants.forEach(function(e) { %>
+          <tr>
+            <td><%= e.title %></td>
+            <td class="locations"><%= e.location %></td>
+            <td><%= e.price %></td>
+            <td></td>
+            <td><a class="addReview" href="/events/<%= e._id %>">Add Review</a></td>
+          </tr>
+          <% }); %>
     </tbody>
   </table>
   

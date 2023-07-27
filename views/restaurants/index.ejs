@@ -31,15 +31,17 @@
             <td class="locations"><%= e.location %></td>
             <td><%= e.price %></td>
             <td></td>
-            <td><a class="addReview" href="/events/<%= e._id %>">Add Review</a></td>
+            <td><a class="addReview" href="/restaurants/<%= e._id %>">Add Review</a></td>
           </tr>
           <% }); %>
     </tbody>
   </table>
 
-  <h3>Google Maps</h3>
-<div id="map"></div>
+  <h3 class="maps">Google Maps</h3>
+<div class="maps" id="map"></div>
 <script>
+
+
   function initMap() {
     var options = {
       zoom: 5,

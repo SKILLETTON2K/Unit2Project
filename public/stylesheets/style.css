@@ -12,9 +12,11 @@
 
 #new-form {
   display: grid;
-  grid-gap: 12px;
+  grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
-  
+  padding-top: 5px;
+  padding-bottom:5px;
+  border-bottom: 0.8px solid black;
 }
 
 #new-form *,
@@ -36,22 +38,15 @@
 
 table {
   font-size: 22.25px;
-  margin-left: 10px;
-  
 }
 
 table thead th {
-  padding: 5px;
   border-bottom: 2px solid #424748;
 }
 
 table td {
   padding: 10px;
-  text-align: center;
-}
-
-#list td:nth-child(2), #list td:nth-child(3){
-  min-width: 100px;
+  text-align: left;
 }
 
 #list a{
@@ -70,27 +65,22 @@ table td {
   background-color: #a6baeb;
 }
 
-#new-form {
-  padding-top: 35px;
-  padding-left: 10px;
-}
-
 #show-page {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  font-size: 22.25px;
+  justify-content: center;
+  border-bottom: 1px dotted black;
+  padding: 5px 0px 5px 0px;
 }
 
 #show-page div:nth-child(even) {
   font-weight: bold;
-}
-
-#add-review-form,
-#add-event-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
+  border: 3px solid #96a7d8;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
 }
 
 #add-review-form input[type="submit"],
@@ -124,23 +114,18 @@ table td {
 }
 
 body{
-   background-color: #cfdaf0;
-   
+  display:flex;
 }
 
 .wrapper{
-  display: flex;
-  background-size: cover;
+  height: 200%;
 }
 
 .wrapper .sidebar{
   width: 150px;
-  height: 200%;
   background: #aebcf68c;
   padding: 20px 0px;
   margin-left: 5px;
-
-
 }
 
 .wrapper .sidebar h2{
@@ -158,7 +143,6 @@ body{
 
 .wrapper .sidebar ul li a{
   color: #6780cb;
-  display: block;
 }
 
 .wrapper .sidebar ul li:hover{
@@ -168,10 +152,7 @@ body{
 .wrapper .sidebar ul li:hover a{
   color: #fff;
 }
-.wrapper .main_content{
-  width: 100%;
-  margin-left: 110%;
-}
+
 
 .logo {
   margin-left: 10px;
@@ -184,12 +165,10 @@ body{
 }
 
 .locations {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .titles {
-  padding-bottom: 20px;
-  padding-left: 10px;
 }
 
 #listThree, #listTwo {
@@ -197,10 +176,6 @@ body{
   border-radius: 3px;
 }
 
-#list {
-  padding-top: 35px;
-  padding-left: 10px;
-}
 
 .spacebar {
   width: 650px;
@@ -220,7 +195,7 @@ body{
   top:0px;
   z-index:-1;
   width: 100%;
-  height: 100%;
+  height: 150%;
   display:flex;
   background-size: cover;
   
@@ -228,9 +203,17 @@ body{
 
 main {
   text-align: center;
+  padding-top: 20px;
+  margin-right: 50%;
 }
 
 #map {
-  height: 200px; 
-  width: 200px; 
+  height: 250px; 
+  width: 250px; 
+  margin-left: 80%;
+  margin-bottom: 50%;
+ }
+
+ h3 {
+  margin-left: 75%;
  }

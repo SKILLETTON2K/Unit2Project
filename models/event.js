@@ -24,7 +24,9 @@ const reviewSchema = new Schema({
 });
 
 const eventSchema = new Schema({
-  title: { type: String, required: true },
+  title: { 
+    type: String, required: true
+   },
   location: {
     type: String,
   },
@@ -35,10 +37,10 @@ const eventSchema = new Schema({
   image: {
     type: String,
   },
-  time: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Event'
-  }],
+  // time: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Event'
+  // }],
   reviews: [reviewSchema]
 }, {
   timestamps: true

@@ -19,15 +19,17 @@ function newEvent(req, res) {
 }
 
 async function create(req, res) {
-  req.body.img = !!req.body.img;
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
+  // req.body.img = !!req.body.img;
+  // for (let key in req.body) {
+  //   if (req.body[key] === '') delete req.body[key];
+  // }
+  console.log(req.body);
   try {
     const event = await Event.create(req.body);
-    res.redirect(`/events/${event._id}`);
+    console.log(event);
+  //   // res.redirect(`/events/${event._id}`);
   } catch (err) {
     console.log(err);
-    res.render('events/new', { errorMsg: err.message });
+  //   res.render('events/new', { errorMsg: err.message });
   }
 }

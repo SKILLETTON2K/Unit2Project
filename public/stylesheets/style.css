@@ -153,7 +153,6 @@ body{
   color: #fff;
 }
 
-
 .logo {
   margin-left: 10px;
   border-radius: 5px;
@@ -168,14 +167,10 @@ body{
   font-size: 17px;
 }
 
-.titles {
-}
-
 #listThree, #listTwo {
   border-bottom: 2px solid #96a7d8;
   border-radius: 3px;
 }
-
 
 .spacebar {
   width: 650px;
@@ -210,10 +205,10 @@ main {
 #map {
   height: 250px; 
   width: 250px; 
-  margin-left: 80%;
   margin-bottom: 50%;
  }
 
  h3 {
-  margin-left: 75%;
+  margin-right: 65%;
  }
+

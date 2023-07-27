@@ -10,7 +10,8 @@ module.exports = {
 
 async function index(req, res) {
   const restaurants = await Restaurant.find({});
-  res.render('restaurants/index', { title: 'All Listings', restaurants });
+  const events = await Event.find({});
+  res.render('restaurants/index', { title: 'All Listings', restaurants, events });
 }
 
 async function show(req, res) {

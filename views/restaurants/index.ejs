@@ -2,7 +2,7 @@
 <table id="list">
   <thead>
     <tr>
-      <th id="listTwo">Restaurant</th>
+      <th id="listTwo">Restaurants</th>
       <th id="listTwo">Location</th>
       <th id="listTwo">Average Price (PP)</th>
     </tr>
@@ -17,6 +17,8 @@
         <td><a class="addReview" href="/restaurants/<%= r._id %>">Add Review</a></td>
       </tr>
       <% }); %>
+      
+      <!-- Events  -->
       <thead>
         <tr>
           <th id="listThree">Events</th>
@@ -25,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <% restaurants.forEach(function(e) { %>
+        <% events.forEach(function(e) { %>
           <tr>
             <td><%= e.title %></td>
             <td class="locations"><%= e.location %></td>
@@ -41,7 +43,7 @@
 <div class="maps" id="map"></div>
 <script>
 
-
+// Google Maps 
   function initMap() {
     var options = {
       zoom: 5,

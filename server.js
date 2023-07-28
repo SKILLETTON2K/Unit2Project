@@ -46,14 +46,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-//Google Maps
-
-
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
 app.use('/events', eventsRouter);
 app.use('/', reviewsRouter);
-app.use('/', eventsRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));

@@ -38,8 +38,7 @@ const eventSchema = new Schema({
     type: String,
   },
   time: {
-    type: Schema.Types.ObjectId,
-    ref: 'Event'
+    type: Schema.Types.ObjectId
   },
   reviews: [reviewSchema]
 }, {

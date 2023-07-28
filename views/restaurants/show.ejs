@@ -9,11 +9,6 @@
   <div><%= restaurant.price %></div>
   <div>Posted Image: </div>
   <div><img src="<%= restaurant.image  %>" height="150px" width="150px" class="images" alt="None"></div>
-  <ul>
-    <%- restaurant.time.map(p => 
-      `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
-    ).join('') %>
-  </ul>
 </section>
 
 <br><br><h2>Reviews</h2>

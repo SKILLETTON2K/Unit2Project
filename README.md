@@ -1,4 +1,5 @@
-Web App Title: Posts Eatery
+**Web App Title: Posts Eatery**
+
 <----SCREENSHOTS---->
 ![Screenshot 2023-07-27 at 6 59 39 PM](https://github.com/SKILLETTON2K/Unit2Project/assets/128420431/504fe12f-7276-4291-ad6f-c2193cb0eb4e)
 ![Screenshot 2023-07-27 at 7 00 00 PM](https://github.com/SKILLETTON2K/Unit2Project/assets/128420431/98679855-b802-4dc7-b6b4-ef802dad23f6)

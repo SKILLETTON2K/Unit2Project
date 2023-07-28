@@ -37,10 +37,10 @@ const eventSchema = new Schema({
   image: {
     type: String,
   },
-  // time: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Event'
-  // }],
+  time: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Event'
+  }],
   reviews: [reviewSchema]
 }, {
   timestamps: true

@@ -1,1 +1,16 @@
+Web App Title: Posts Eatery
+<----SCREENSHOTS---->
 
+
+<----TECHNOLOGIES USED----> JavaScript, HTML, CSS, Node.js, MongoDB, Mongoose, OAuth, Google Maps API, Heroku
+
+<----LINK----> (https://sleepy-cove-84234-7c44363eb418.herokuapp.com/restaurants)
+
+
+<----SUMMARY---->
+On Posts Eatery it allows users from around the area to post they're favorite Restaurants and Activities! You can post the names, locations, average pricing, and even photo's! 
+You can also leave reviews on your own posts and others to see what others think about they're exprience at said post! 
+
+<----FUTURE PLANS----> 
+I plan to add in a search bar on the google maps API so you can just copy and paste the location right then and there right on the home page!
+Also to be able to allow users to post more than 1 photo at a time and a singular posting.

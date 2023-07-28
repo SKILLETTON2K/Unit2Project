@@ -10,8 +10,8 @@ module.exports = {
 
 async function show(req, res) {
   const event = await Event.findById(req.params.id).populate('time');
-  const events = await Event.find({ _id: { $nin: event.time } }).sort('name');
-  res.render('events/show', { title: 'Event Details', event, events });
+  // const events = await Event.find({ _id: { $nin: event.time } }).sort('name');
+  res.render('events/show', { title: 'Event Details', event });
 }
 
 function newEvent(req, res) {
@@ -27,7 +27,7 @@ async function create(req, res) {
   try {
     const event = await Event.create(req.body);
     console.log(event);
-  //   // res.redirect(`/events/${event._id}`);
+    res.redirect(`/events/${event._id}`);
   } catch (err) {
     console.log(err);
   //   res.render('events/new', { errorMsg: err.message });

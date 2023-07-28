@@ -16,8 +16,8 @@ async function index(req, res) {
 
 async function show(req, res) {
   const restaurant = await Restaurant.findById(req.params.id).populate('time');
-  const events = await Event.find({ _id: { $nin: restaurant.time } }).sort('name');
-  res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, events });
+  // const events = await Event.find({ _id: { $nin: restaurant.time } }).sort('name');
+  res.render('restaurants/show', { title: 'Restaurant Detail', restaurant });
 }
 
 function newRestaurant(req, res) {

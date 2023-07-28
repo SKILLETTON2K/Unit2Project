@@ -234,3 +234,9 @@ main {
 .addButton:hover{
   background-color: #93aaea;
 }
+
+input, select, textarea {
+background-color: rgba(228, 221, 252, 0.642);
+border-radius: 5px;
+border: 1.5px solid #8a9bc4;
+}
